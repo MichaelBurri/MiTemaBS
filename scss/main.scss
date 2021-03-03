@@ -1,0 +1,185 @@
+//COLORES
+  
+//Body
+$body-bg:rgba(29, 21, 21, 0.753) ;
+$body-color:white;
+
+//Colores generales
+$primary:#94a3b9ec;
+$secondary: rgba(68, 68, 68, 0.808);
+$success:#00bcac;
+$danger:#f94c3c ;
+$light:#dceeea;
+$dark:#404040 ;
+
+//Links
+$link-color:$success;
+
+//hr
+$hr-border-color: white;
+
+//
+body{
+    margin: 10px;
+    padding: 4rem !important;
+}
+
+//FUENTES
+//tipografía
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Stick&display=swap');
+$font-family-base:'RocknRoll One', sans-serif;
+$font-family-monospace:'Stick', sans-serif;
+//tamaño 
+$font-size-base:1.2rem;
+
+/* 
+
+MENU DE NAVEGACIÓN 
+
+*/
+  
+$nav-link-padding-x:2rem;
+$nav-tabs-border-color:#444;
+
+.nav-item{
+    transition: all .6s ease-in-out;
+    -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;    
+    
+    &.active{
+        background-color: lighten($primary, 20%);
+        color: white;
+    }
+    &:hover, &.nav-link:focus{
+        background-color: darken($primary, 13%) !important;
+    }
+}
+
+//LISTA DESPLEGABLE
+//Colores
+$dropdown-bg:rgba(37, 35, 35, 0.877);
+$dropdown-border-color:rgb(68, 48, 48);
+$dropdown-divider-bg:rgb(68, 49, 49);
+$dropdown-link-color: rgb(255, 255, 255);
+$dropdown-link-hover-color: rgb(255, 255, 255);
+$dropdown-link-hover-bg:$primary;
+
+//Animaciones
+.dropdown-menu.show { 
+    animation-fill-mode: both;
+    animation: growOut 300ms ease-in-out forwards;
+    transform-origin: top center;
+} 
+//Definición de la animación
+@keyframes growOut {
+     0% {
+        transform: scale(0)
+    }
+    80% {
+        transform: scale(1.1)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+//FORMULARIO
+
+//Bordes
+$input-border-color:$body-bg;
+//Add-ons
+$input-group-addon-color:#788b9e;
+$input-group-addon-bg:rgb(73, 56, 56);
+//Color general
+$input-bg:$primary;
+$input-color:white;
+//Color disabled
+$input-placeholder-color:rgba(80, 39, 5, 0.404);
+$input-disabled-bg:darken($light,25%);
+//Archivos
+$custom-file-color:#96adc5;
+$custom-file-border-color:$body-bg ;
+//bordes
+$input-border-color: rgba(12, 12, 3, 0.842);
+$input-border-radius: 23px;
+
+//CARD
+//color
+$card-cap-bg:rgb(56, 55, 55) ;
+$card-bg:#352d2d ;
+//animación
+.card-body{
+    transition: all 0.8s ease-in;
+    &:hover{
+        background-color:#1a1313 ;
+        transform: translateX(10rem);
+        -webkit-transform: translateX(10rem);
+        -moz-transform: translateX(10rem);
+        -ms-transform: translateX(10rem);
+        -o-transform: translateX(10rem);
+}
+}
+//MODAL
+//Color y opacidad
+$modal-content-bg:#312a2a;
+$modal-backdrop-bg: darken($primary,40%);
+$modal-backdrop-opacity:0.8;
+
+//Bordes color
+$modal-header-border-color:$primary;
+$modal-content-border-color: $primary;
+$modal-footer-border-color:$primary;
+
+//Bordes ancho
+$modal-header-border-width:7px;
+$modal-footer-border-width:7px;
+
+//Botón Close
+$close-color:white;
+
+//JUMBOTRON
+//padding
+$jumbotron-padding:30px;
+//color de fondo y letra
+$jumbotron-color:$success;
+$jumbotron-bg:$body-bg;
+
+//SPINNER
+//ancho&alto
+$spinner-width:2rem;
+$spinner-height:2rem;
+//animación
+@keyframes spinner-grow {
+    0% {
+      transform: scale(3);
+    }
+    80% {
+      opacity: 0.7;
+      transform: none;
+    }
+  }
+
+  //PROGRESS BAR
+  //altura de la barra
+  $progress-height:3rem;
+  //tamaño de fuente
+  $progress-font-size:1.3rem;
+  //color de la barra
+  $progress-bar-color: $secondary;
+  //radio del borde
+  $progress-border-radius:13px;
+  //sombra
+  $progress-box-shadow:1px black;
+
+ 
+
+
+
+
+
+
+//Importamos todos los archivos de Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+//@import "../../bootstrap-4.5.3/scss/bootstrap.scss";
